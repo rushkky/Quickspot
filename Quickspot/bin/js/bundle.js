@@ -23,11 +23,67 @@
         }
     }
 
+    class Adaptation extends Laya.Script {
+        constructor() {
+            super();
+            this.stage_width = 640;
+            this.stage_height = 1136;
+            this.browser_scale_last = 1;
+            this.first_setpos = false;
+            Laya.init(this.stage_width, this.stage_height);
+            Laya.stage.alignH = Laya.Stage.ALIGN_CENTER;
+            Laya.stage.alignV = Laya.Stage.ALIGN_MIDDLE;
+            Laya.stage.screenMode = Laya.Stage.SCREEN_VERTICAL;
+            Laya.stage.on(Laya.Event.RESIZE, this, this.resize);
+        }
+        onEnable() {
+            this.root = this.owner;
+        }
+        resetRootPos() {
+            if (this.root != null) {
+                var tempX = 0;
+                var tempY = 0;
+                var tempWidth = Math.abs(Laya.stage.width - this.stage_width);
+                tempX = tempWidth / 2;
+                var tempHeight = Math.abs(Laya.stage.height - this.stage_height);
+                tempY = tempHeight / 2;
+                if (tempX != 0 || tempY != 0) {
+                    this.root.pos(tempX, tempY);
+                }
+            }
+        }
+        resize() {
+            var browser_scale = Laya.Browser.width / Laya.Browser.height;
+            var stage_scale = this.stage_width / this.stage_height;
+            if (this.browser_scale_last != browser_scale) {
+                this.browser_scale_last = browser_scale;
+                if (browser_scale > stage_scale) {
+                    Laya.stage.scaleMode = Laya.Stage.SCALE_FIXED_HEIGHT;
+                }
+                else {
+                    Laya.stage.scaleMode = Laya.Stage.SCALE_FIXED_WIDTH;
+                }
+                console.log("Browser.width", Laya.Browser.width);
+                console.log("Browser.height", Laya.Browser.height);
+                console.log("stage.width", Laya.stage.width);
+                console.log("stage.height", Laya.stage.height);
+                console.log("html canvas width", Laya.Render.canvas.getAttribute("width"));
+                console.log("html canvas height", Laya.Render.canvas.getAttribute("height"));
+                console.log("browser_scale", browser_scale);
+                console.log("stage_scale", stage_scale);
+            }
+            this.resetRootPos();
+        }
+        onDisable() {
+        }
+    }
+
     class GameConfig {
         constructor() { }
         static init() {
             var reg = Laya.ClassUtils.regClass;
             reg("script/MainStage.ts", MainStage);
+            reg("script/Adaptation.ts", Adaptation);
         }
     }
     GameConfig.width = 640;

@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
-    "selecteID":6,
+    "selectedBox":7,
+    "selecteID":10,
     "searchKey":"Scene,MainStage",
     "props":{"width":640,"sceneColor":"#000000","runtime":"script/MainStage.ts","name":"MainStage","height":1136},
     "nodeParent":-1,
-    "maxID":9,
+    "maxID":15,
     "label":"MainStage",
     "isOpen":true,
     "isDirectory":true,
@@ -17,8 +17,23 @@
         {
             "x":15,
             "type":"Sprite",
+            "searchKey":"Sprite,bg",
+            "props":{"y":-431,"x":-680,"width":2000,"texture":"uires/ScrollView_Background.png","name":"bg","height":2000},
+            "nodeParent":2,
+            "label":"bg",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":13,
+            "child":[
+                ],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Sprite",
             "searchKey":"Sprite,root",
-            "props":{"name":"root"},
+            "props":{"y":0,"x":0,"name":"root"},
             "nodeParent":2,
             "label":"root",
             "isOpen":true,
@@ -48,37 +63,68 @@
                     "props":{"name":"mid"},
                     "nodeParent":3,
                     "label":"mid",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":5,
                     "child":[
                         {
+                            "x":45,
                             "type":"Sprite",
-                            "searchKey":"Sprite,login_ui",
-                            "props":{"name":"login_ui"},
+                            "searchKey":"Sprite,login_ui_container",
+                            "props":{"name":"login_ui_container"},
                             "nodeParent":5,
-                            "label":"login_ui",
+                            "label":"login_ui_container",
                             "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
-                            "compId":7,
+                            "compId":9,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Sprite",
-                                    "searchKey":"Sprite,img_bg",
-                                    "props":{"texture":"uires/login_bg.jpg","name":"img_bg"},
-                                    "nodeParent":7,
-                                    "label":"img_bg",
-                                    "isDirectory":false,
+                                    "searchKey":"Sprite,login_ui",
+                                    "props":{"x":0,"name":"login_ui","centerY":247},
+                                    "nodeParent":9,
+                                    "label":"login_ui",
+                                    "isOpen":true,
+                                    "isDirectory":true,
                                     "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":8,
+                                    "hasChild":true,
+                                    "compId":7,
                                     "child":[
-                                        ]
-                                }]
+                                        {
+                                            "x":75,
+                                            "type":"Sprite",
+                                            "searchKey":"Sprite,img_bg",
+                                            "props":{"y":0,"x":0,"texture":"uires/login_bg.jpg","name":"img_bg"},
+                                            "nodeParent":7,
+                                            "label":"img_bg",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":8,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Button",
+                                            "searchKey":"Button",
+                                            "props":{"y":888,"x":200,"width":250,"stateNum":"1","skin":"uires/LargeButton_NormalState.png","labelStrokeColor":"#000000","labelSize":30,"labelFont":"Arial","labelColors":"#ffffff","labelBold":true,"labelAlign":"center","label":"开始游戏"},
+                                            "nodeParent":7,
+                                            "label":"Button",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":10,
+                                            "child":[
+                                                ]
+                                        }]
+                                }],
+                            "$HIDDEN":false
                         }]
                 },
                 {
@@ -92,6 +138,24 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":6,
+                    "child":[
+                        ],
+                    "$HIDDEN":true
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/Adaptation.ts",
+                    "searchKey":"Script,Adaptation",
+                    "removeAble":true,
+                    "props":{},
+                    "nodeParent":3,
+                    "label":"Adaptation",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":14,
                     "child":[
                         ]
                 }]
