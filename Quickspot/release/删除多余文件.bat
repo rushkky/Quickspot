@@ -1,0 +1,23 @@
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\bytebuffer.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.ani.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.bdmini.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\domparserinone.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.d3.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.debugtool.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.device.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.html.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.particle.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.pathfinding.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.physics3D.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.physics3D.runtime.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.physics3D.wasm.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.qqmini.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.quickgamemini.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.tiledmap.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.vvmini.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\laya.xmmini.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\worker.js
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\libs\workerloader.js
+
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\res\atlas\comp.atlas
+del /a /f /q F:\Quickspot\Quickspot\release\wxgame\res\atlas\comp.png
